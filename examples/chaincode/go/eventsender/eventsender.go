@@ -75,7 +75,7 @@ func (t *EventSender) Invoke(stub shim.ChaincodeStubInterface, function string, 
 		tosend := "{'cusip':'" + args[0] + "',"
 		tosend += "'record_date':'" + args[1] + "',"
 		tosend += "'event_type':'" + args[2] + "',"
-		tosend += "'client':'" + args[2] + "'}"
+		tosend += "'client':'" + args[3] + "'}"
 
 		err = stub.SetEvent("updateEntitlement", []byte(tosend))
 		if err != nil {
